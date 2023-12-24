@@ -16,8 +16,8 @@ public class InputController {
         // input.htmlに画面遷移
         return "input";
     }
-    
-    @PostMapping("/output")
+
+    @PostMapping("/input")
     public String postInput(@RequestParam("previous") String previous, Model model) {
         // フォームから送信されてきた値をModelに登録
         model.addAttribute("previous", previous);
