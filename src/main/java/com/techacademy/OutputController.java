@@ -1,17 +1,15 @@
 package com.techacademy;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class OutputController {
-
-    @PostMapping("/output")
-    public String postOutput(@RequestParam("inputValue") String inputValue, RedirectAttributes redirectAttributes) {
-        // 入力画面に戻る際に値をパラメータとして渡す
-        redirectAttributes.addAttribute("previous", inputValue);
-        return "redirect:/input";
+    
+    @GetMapping("/output")
+    public String getOutput() {
+        // output.htmlに画面遷移
+        return "output";
     }
+    
 }
