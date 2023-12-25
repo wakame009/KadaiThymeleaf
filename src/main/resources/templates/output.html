@@ -6,10 +6,10 @@
 </head>
 <body>
 <main>
-    <h1>Thymeleaf課題</h1>
-    <h2>出力画面</h2>
-    <p th:if="${previous}" th:text="'入力された値は「' + ${previous} + '」です。'"></p>
-    <p><a th:href="|input?previous=${previous}|">入力画面へ戻る</a></p>
+    <h1 th:text="#{content.title}"></h1>
+    <h2 th:text="#{content.output}"></h2>
+    <p th:if="${previous}" th:text="#{content.outputMessage(${previous})}"></p>
+    <p><a th:href="|input?previous=${previous}|" th:text="#{content.backtoInput}"></a></p>
 </main>
 </body>
 </html>
